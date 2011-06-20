@@ -1,0 +1,43 @@
+<?php
+	
+function register_verone_menus() {
+  register_nav_menus(
+    array(
+    	'header-menu' => __( 'Header Menu' ),
+    	'sidebar-menu' => __( 'Sidebar Menu' ),
+    	'blog-sidebar' => __( 'Blog Sidebar')
+    )
+  );
+}
+
+
+function verone_init() {
+	
+	register_verone_menus();
+	
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		wp_deregister_script('jquery-ui-core');
+		wp_deregister_script('jquery-ui-tabs');
+		wp_deregister_script('jquery-ui-sortable');
+		wp_deregister_script('jquery-ui-draggable');
+		wp_deregister_script('jquery-ui-droppable');
+		wp_deregister_script('jquery-ui-selectable');
+		wp_deregister_script('jquery-ui-resizable');
+		wp_deregister_script('jquery-ui-dialog');
+		
+		wp_register_script('jquery', get_bloginfo('template_directory').'/js/jquery-1.5.2.min.js', false, '1.5.2');
+		wp_register_script('jquery-ui', get_bloginfo('template_directory').'/js/jquery-ui-1.8.12.custom.min.js', 'jquery', '1.8.12');
+		wp_register_script('hashgrid', get_bloginfo('template_directory').'/js/hashgrid.js', 'jquery', '5');
+		
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('jquery-ui');
+		wp_enqueue_script('hashgrid');
+	}
+}
+
+add_action( 'init', 'verone_init' );
+
+
+
+?>
