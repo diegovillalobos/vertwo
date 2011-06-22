@@ -43,13 +43,13 @@ body, #navigation, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
 /* Begin Styling */
 
 body {
-	width: 1002px;
+	width: 978px;
 	margin: 0 auto;
 	font-family: Sans-Serif;
 	color: #006400;
 	font-size: 14px;
 	line-height: 1.25;
-	background-color: #000;
+
 }
 
 #header {
@@ -72,7 +72,7 @@ body {
 }
 
 #navigation {
-	width: 222px;
+	width: 168px;
 	clear: left;
 	float: left;
 	font-weight: lighter;
@@ -86,11 +86,16 @@ body {
 	list-style: none;
 	text-decoration: none;
 	color: #0099cc;
+	opacity: .8;
 }
 
 #navigation  li a:hover {
-	opacity: 0.4;
-	
+	color: #016999;
+}
+
+#navigation  li a:after {
+	opacity: 1.0;
+	color: #016999;
 }
 
 #searchform {
@@ -98,19 +103,49 @@ body {
 	float: right;
 }
 
+#search.widget_search label {
+	display: none;
+}
+
+#s {
+	width: 168px;
+	border: none;
+	border-bottom: thin solid #0099cc;
+	border-left: thin solid #0099cc;
+	float: right;
+}
+
+input#searchsubmit:hover {
+	padding: 5px 5px 0 5px;
+	border-bottom: solid thin #0099cc;
+	border-left: solid thin #0099cc;
+	color: #fff;
+	background-color: #0099cc;
+}
+ 
 #searchsubmit {
 	cursor: pointer;
 	color: #0099cc;
 	font-size: 1em;
-	padding: 4px 0;
-	float: right;
+	padding: 1px 5px;
 	border: none;
 	background-color: transparent;
 }
 
+#home .widget-title {
+	font-size: 2em;
+	color: #016999;
+	margin-bottom: 30px;
+}
+
+#home .textwidget {
+	margin-bottom: 30px;
+}
 
 #middle {
-	margin-left: 252px;
+	width: 504px;
+	float: left;
+	margin: 30px 0 0 84px; 
 }
 
 #footer {

@@ -9,7 +9,7 @@
 	<div id="content">
 		
 		
-		<div id="home_columns">
+		<div id="home">
 			<?php if ( ! dynamic_sidebar( 'home-content-widget-area' ) ) : ?>
 			<?php endif; ?>
 		</div>

@@ -7,7 +7,7 @@
 			<?php endif; ?>
 	</div>
 
-		<div id="content">	
+		<div id="middle">	
 		
 
 			<?php query_posts( 'cat=-8'); ?>		
